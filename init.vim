@@ -360,7 +360,9 @@ noremap <C-q> :q<CR>
 map <Enter> o<ESC>
 map <S-Enter> O<ESC>
 
-" use a different register for delete and paste
+" use a different register for change, delete and paste
+nnoremap c "_c
+vnoremap c "_c
 nnoremap d "_d
 vnoremap d "_d
 vnoremap p "_dP
