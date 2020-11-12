@@ -47,6 +47,8 @@ call plug#end()
 
 " ==================== general config ======================== "{{{
 
+set t_8f=\[[38;2;%lu;%lu;%lum
+set t_8b=\[[48;2;%lu;%lu;%lum
 set termguicolors                                       " Opaque Background
 set mouse=a                                             " enable mouse scrolling
 set clipboard+=unnamedplus                              " use system clipboard by default
@@ -95,22 +97,23 @@ set signcolumn=yes
 " Themeing
 let g:material_style = 'oceanic'
 colorscheme vim-material
-hi Pmenu guibg='#00010a' guifg=white                    " popup menu colors
+hi Pmenu guibg=NONE guifg=white                    " popup menu colors
 hi Comment gui=italic cterm=italic                      " italic comments
-hi Search guibg=#b16286 guifg=#ebdbb2 gui=NONE          " search string highlight color
-hi NonText guifg=bg                                     " mask ~ on empty lines
+hi Search guibg=NONE guifg=#ebdbb2 gui=NONE          " search string highlight color
 hi clear CursorLineNr                                   " use the theme color for relative number
 hi CursorLineNr gui=bold                                " make relative number bold
 hi SpellBad guifg=NONE gui=bold,undercurl               " misspelled words
 
 " colors for git (especially the gutter)
-hi DiffAdd  guibg=#0f111a guifg=#43a047
-hi DiffChange guibg=#0f111a guifg=#fdd835
-hi DiffRemoved guibg=#0f111a guifg=#e53935
+hi DiffAdd  guibg=NONE guifg=#43a047
+hi DiffChange guibg=NONE guifg=#fdd835
+hi DiffRemoved guibg=NONE guifg=#e53935
 
 " coc multi cursor highlight color
-hi CocCursorRange guibg=#b16286 guifg=#ebdbb2
+hi CocCursorRange guibg=NONE guifg=#ebdbb2
 
+hi Normal guibg=NONE ctermbg=NONE
+hi NonText ctermbg=none
 "}}}
 
 " ======================== Plugin Configurations ======================== "{{{
@@ -141,6 +144,8 @@ endif
 let g:airline_symbols.linenr = ''
 let g:airline_symbols.branch = '⎇ '
 let g:airline_symbols.dirty= ''
+hi airline_c ctermbg=NONE guibg=NONE
+hi airline_tabfill ctermbg=NONE guibg=NONE
 
 "" coc
 
@@ -156,7 +161,6 @@ let g:coc_global_extensions = [
             \'coc-actions',
             \'coc-css',
             \'coc-html',
-            \'coc-tsserver',
             \'coc-yaml',
             \'coc-lists',
             \'coc-snippets',
@@ -168,7 +172,6 @@ let g:coc_global_extensions = [
             \'coc-git',
             \'coc-marketplace',
             \'coc-highlight',
-            \'coc-flutter',
             \]
 
 " indentLine

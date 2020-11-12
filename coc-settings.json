@@ -3,14 +3,14 @@
   "coc.preferences.colorSupport": true,
   "coc.preferences.snippetStatusText": "Ⓢ ",
   "coc.preferences.formatOnSaveFiletypes": [
-    "javascript",
+//    "javascript",
     "html",
     "css",
     "json",
     "markdown",
-    "typescript",
+//    "typescript",
     "python",
-    "dart"
+//    "dart"
   ],
 
   // suggest settings
