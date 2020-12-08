@@ -3,14 +3,14 @@
   "coc.preferences.colorSupport": true,
   "coc.preferences.snippetStatusText": "Ⓢ ",
   "coc.preferences.formatOnSaveFiletypes": [
-//    "javascript",
+    //    "javascript",
     "html",
     "css",
     "json",
     "markdown",
-//    "typescript",
-    "python",
-//    "dart"
+    //    "typescript",
+    "python"
+    //    "dart"
   ],
 
   // suggest settings
@@ -75,6 +75,7 @@
 
   // other stuff (language specific)
   "python.autoComplete.addBrackets": true,
+  "python.formatting.provider": "yapf",
   "python.jediEnabled": false,
   "html.autoClosingTags": true
 }
